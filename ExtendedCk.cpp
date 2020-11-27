@@ -17,6 +17,7 @@
 #include "TF1.h"
 #include "TFile.h"
 #include "TH1F.h"
+#include "TH2F.h"
 #include "TNtuple.h"
 
 ///An example how to compute the pLambda correlation function using the Usmani potential and the Lednicky model
