@@ -8,3 +8,8 @@ How to run:
 	./RUN_EXEC.sh (to run only)
 	./COMPILE_AND_RUN.sh (first compile than run)
 6) any output will be in CATS_TUTORIAL_2019/OutputFiles
+
+some old slides related to this tutorial are here:
+https://docs.google.com/presentation/d/1Q8CimYyCVPNNVTfFmhgZBa3FWEISAtpY-6cQNbL6eK4/edit?usp=sharing
+
+no guarantees that anything works

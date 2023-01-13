@@ -218,7 +218,7 @@ DLM_CleverMcLevyResoTM* CATS_ResoSource_pp(CATS& Kitty, const double& SourceSize
     //To set up such an TNtuple: be creative :) In case of difficulties (or if you need EPOS output) write me or Max an email and we can discuss.
     //we actually have two TNtuple, one for the case of primary-secondary protons, and one for secondary-secondary. Note that for non-identical particles
     //you will also have to consider separately secondary-primary.
-    TFile* F_EposDisto_p_pReso = new TFile("/home/dmihaylov/Dudek_Ubuntu/Work/Kclus/GeneralFemtoStuff/CATS_TUTORIAL_2019/Files/EposDisto_p_pReso.root");
+    TFile* F_EposDisto_p_pReso = new TFile("../Files/EposDisto_p_pReso.root");
     TNtuple* T_EposDisto_p_pReso = (TNtuple*)F_EposDisto_p_pReso->Get("InfoTuple_ClosePairs");
     unsigned N_EposDisto_p_pReso = T_EposDisto_p_pReso->GetEntries();
     T_EposDisto_p_pReso->SetBranchAddress("k_D",&k_D);
@@ -251,7 +251,7 @@ DLM_CleverMcLevyResoTM* CATS_ResoSource_pp(CATS& Kitty, const double& SourceSize
     delete F_EposDisto_p_pReso;
 
     //do exactly the same thing for the reso-reso case
-    TFile* F_EposDisto_pReso_pReso = new TFile("/home/dmihaylov/Dudek_Ubuntu/Work/Kclus/GeneralFemtoStuff/CATS_TUTORIAL_2019/Files/EposDisto_pReso_pReso.root");
+    TFile* F_EposDisto_pReso_pReso = new TFile("../Files/EposDisto_pReso_pReso.root");
     TNtuple* T_EposDisto_pReso_pReso = (TNtuple*)F_EposDisto_pReso_pReso->Get("InfoTuple_ClosePairs");
     unsigned N_EposDisto_pReso_pReso = T_EposDisto_pReso_pReso->GetEntries();
     T_EposDisto_pReso_pReso->SetBranchAddress("k_D",&k_D);

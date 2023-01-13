@@ -33,8 +33,8 @@ int main(int argc, char *argv[]){
 
     //Ck_pL_Ledni_Usmani();
 
-    //Ck_pp_Decomposition("Gauss");
-    //Ck_pp_Decomposition("CoreReso");
+    Ck_pp_Decomposition("Gauss");
+    Ck_pp_Decomposition("CoreReso");
 
     return 0;
 }
