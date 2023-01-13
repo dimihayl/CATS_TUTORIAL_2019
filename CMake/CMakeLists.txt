@@ -6,11 +6,11 @@ SET(PROJECT_NAME "CMake_CATS")
 
 project(${PROJECT_NAME})
 # SET PATHS #
-SET(PROJECT_DESTINATION "/home/dmihaylov/Dudek_Ubuntu/Work/Kclus/GeneralFemtoStuff/CATS_TUTORIAL_2019")#the destination of your project
+SET(PROJECT_DESTINATION "/home/dimihayl/Software/Repositories/CATS_TUTORIAL_2019")#the destination of your project
 SET(GSL_INCLUDE "/usr/include/gsl")#where are all GSL related .h files
 SET(GSL_LIB "/usr/lib")#where are the GSL .a and .so files
-SET(CATS_PATH "/home/dmihaylov/Apps/CATS")#the CATS main folder (containing cats-config)
-SET(CATS_TYPE "dev")#basic, extended or dev
+SET(CATS_PATH "/home/dimihayl/Software/Repositories/DLM/install")#the CATS main folder (containing cats-config)
+#SET(CATS_TYPE "dev")#basic, extended or dev
 
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_DESTINATION}/CMake/bin)
 
@@ -31,7 +31,8 @@ execute_process(COMMAND bash -c "${ROOT_PATH}/bin/root-config --libs" OUTPUT_VAR
 execute_process(COMMAND bash -c "${ROOT_PATH}/bin/root-config --glibs" OUTPUT_VARIABLE GLIBS)
 execute_process(COMMAND bash -c "${ROOT_PATH}/bin/root-config --incdir" OUTPUT_VARIABLE ROOT_INCLUDE)
 execute_process(COMMAND bash -c "${CATS_PATH}/bin/cats-config --incdir" OUTPUT_VARIABLE CATS_INCLUDE)
-execute_process(COMMAND bash -c "${CATS_PATH}/bin/cats-config --libs-${CATS_TYPE}" OUTPUT_VARIABLE CATS_LIBS)
+#execute_process(COMMAND bash -c "${CATS_PATH}/bin/cats-config --libs-${CATS_TYPE}" OUTPUT_VARIABLE CATS_LIBS)
+execute_process(COMMAND bash -c "${CATS_PATH}/bin/cats-config --libs" OUTPUT_VARIABLE CATS_LIBS)
 
 string(REGEX REPLACE "\n$" "" CFLAGS "${CFLAGS}")
 string(REGEX REPLACE "\n$" "" LIBS "${LIBS}")
@@ -73,6 +74,5 @@ file(APPEND CMakeDLM.txt "${ROOT_PATH}\n")
 file(APPEND CMakeDLM.txt "${GSL_INCLUDE}\n")
 file(APPEND CMakeDLM.txt "${GSL_LIB}\n")
 file(APPEND CMakeDLM.txt "${CATS_PATH}\n")
-file(APPEND CMakeDLM.txt "${CATS_TYPE}\n")
+#file(APPEND CMakeDLM.txt "${CATS_TYPE}\n")
 file(APPEND CMakeDLM.txt "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}\n")
-

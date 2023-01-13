@@ -11,12 +11,9 @@ done < $input
 THISROOT=${MYARRAY[2]}/bin/thisroot.sh
 . $THISROOT
 if [ "$#" -eq 0 ]; then
-${MYARRAY[7]}/${MYARRAY[0]}
+${MYARRAY[6]}/${MYARRAY[0]}
 else
-${MYARRAY[7]}/${MYARRAY[0]} $*
+${MYARRAY[6]}/${MYARRAY[0]} $*
 fi
 
 )
-
-
-

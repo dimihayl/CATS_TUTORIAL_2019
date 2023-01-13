@@ -1,0 +1,7 @@
+./CMake/*
+!./CMake/CMakeLists.txt
+!./CMake/COMPILE_AND_RUN.sh
+!./CMake/COMPILE.sh
+!./CMake/RUN_EXEC.sh
+./Files/
+

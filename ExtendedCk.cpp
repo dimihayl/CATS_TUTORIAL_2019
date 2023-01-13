@@ -9,6 +9,7 @@
 #include "DLM_Source.h"
 #include "DLM_CkDecomposition.h"
 #include "DLM_CkModels.h"
+#include "DLM_Ck.h"
 #include "DLM_Random.h"
 #include "DLM_CppTools.h"
 
@@ -17,7 +18,9 @@
 #include "TF1.h"
 #include "TFile.h"
 #include "TH1F.h"
+#include "TH2F.h"
 #include "TNtuple.h"
+#include "TROOT.h"
 
 ///An example how to compute the pLambda correlation function using the Usmani potential and the Lednicky model
 void Ck_pL_Ledni_Usmani(){

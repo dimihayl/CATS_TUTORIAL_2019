@@ -1,4 +1,5 @@
-#include<iostream>
+#include <iostream>
+
 #include "Basics.h"
 #include "ExtendedCk.h"
 
@@ -6,6 +7,8 @@
 #include "TGraph.h"
 #include "TFile.h"
 #include "TH1F.h"
+
+using namespace std;
 
 void ComparePionPion(){
     TGraph* grCATS = Basics_PiPiCATS(1,1);
@@ -29,8 +32,9 @@ int main(int argc, char *argv[]){
     //Basics_ProtonLambda();
 
     //Ck_pL_Ledni_Usmani();
-    Ck_pp_Decomposition("Gauss");
-    Ck_pp_Decomposition("CoreReso");
+
+    //Ck_pp_Decomposition("Gauss");
+    //Ck_pp_Decomposition("CoreReso");
 
     return 0;
 }
